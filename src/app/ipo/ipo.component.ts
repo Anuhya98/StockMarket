@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl, FormBuilder, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
+import { IpoService } from '../ipo.service';
 
 @Component({
   selector: 'app-ipo',
@@ -8,7 +10,7 @@ import {FormGroup,FormControl, FormBuilder, Validators} from '@angular/forms';
 })
 export class IpoComponent implements OnInit {
 ipoForm:FormGroup;
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,private router:Router,private ipoService:IpoService) { }
   submit(){
     console.log(this.ipoForm.value);
   }
@@ -23,6 +25,12 @@ ipoForm:FormGroup;
       
     });
 
+  }
+  addIPO()
+  {
+    this.ipoService.saveIPO(this.ipoForm.value.subscribe(data =>{
+      console.log('IPO inserted successfully');
+    }))
   }
 
 }

@@ -21,6 +21,8 @@ import { AdminlandingComponent } from './adminlanding/adminlanding.component';
 import { ManageCompaniesComponent } from './manage-companies/manage-companies.component';
 import { CompareSectorComponent } from './compare-sector/compare-sector.component';
 import { UserLandingComponent } from './user-landing/user-landing.component';
+//import { AddcompanyComponent } from './addcompany/addcompany.component';
+
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
     AdminlandingComponent,
     ManageCompaniesComponent,
     CompareSectorComponent,
-    UserLandingComponent
+    UserLandingComponent,
+    //AddcompanyComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,34 @@
+{
+"managecompanies":[
+    {
+        "companyname":"Patanjali",
+        "turnover":10000,
+        "companyceoname":"Ramdev",
+        "selectstockexchange":"nse",
+        "selectsector":"Ayurvedic"
+    },
+    {
+        "companyname":"TCS",
+        "turnover":50000,
+        "companyceoname":"Chandrashekar",
+        "selectstockexchange":"bse",
+        "selectsector":"IT"
+    },
+    {
+        "companyname":"Reliance",
+        "turnover":80000,
+        "companyceoname":"Mukesh Ambani",
+        "selectstockexchange":"nse",
+        "selectsector":"All"
+    },
+    {
+        "companyname":"Loreal Paris",
+        "turnover":40000,
+        "companyceoname":"Mr.X",
+        "selectstockexchange":"bse",
+        "selectsector":"Beauty"
+    }
+
+
+]
+}

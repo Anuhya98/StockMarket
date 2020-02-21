@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { IpoService } from '../ipo.service';
 import { Router } from '@angular/router';
+import { IPO } from '../models/ipos';
 
 @Component({
   selector: 'app-update-ipo',
@@ -28,5 +29,6 @@ export class UpdateIpoComponent implements OnInit {
     });
 
   }
+ 
 
 }

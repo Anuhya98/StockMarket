@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { IpoService } from '../ipo.service';
 
 @Component({
   selector: 'app-addipo',
@@ -9,8 +10,11 @@ import { Router } from '@angular/router';
 })
 export class AddipoComponent implements OnInit {
  addipoForm:FormGroup;
+ submit(){
+   console.log(this.addipoForm.value);
+ }
   ipoService: any;
-  constructor(private formBuilder:FormBuilder,private router:Router) { }
+  constructor(private formBuilder:FormBuilder,private router:Router,private iposervice:IpoService) { }
 
   ngOnInit() {
     this.addipoForm=this.formBuilder.group({
@@ -24,8 +28,8 @@ export class AddipoComponent implements OnInit {
   }
     addIPO()
   {
-    this.ipoService.saveUser(this.addipoForm.value).subscribe(data =>{
-      console.log('User Inserted Successfully');
+    this.ipoService.saveIPO(this.addipoForm.value).subscribe(data =>{
+      console.log('IPO Inserted Successfully');
     });
 
   }

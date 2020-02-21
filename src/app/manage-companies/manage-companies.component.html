@@ -15,9 +15,9 @@
         <div class="form-group">
         <div class="custom-control">
 
-                <p style="color: white;font-weight: bold" formControlName="selectstockexchange">Select the stock exchange</p>
-                <select name="cars" class="form-control">
-                   <option selected>Stock Exchange</option>
+                <p style="color: white;font-weight: bold" >Select the stock exchange</p>
+                <select name="selectstockexchange" class="form-control" formControlName="selectstockexchange">
+                   <!-- <option selected>Stock Exchange</option> -->
                    <option value="nse">NSE</option>
                    <option value="bse">BSE</option>
                    <option value="others">Others</option>
@@ -27,15 +27,16 @@
         <div class="form-group">
             <div class="custom-control">
     
-                    <p style="color: white;font-weight: bold" formControlName="selectsector">Select the sector</p>
-                    <select name="cars" class="form-control">
-                       <option selected>Sector</option>
+                    <p style="color: white;font-weight: bold" >Select the sector</p>
+                    <select name="selectsector" class="form-control" formControlName="selectsector">
+                       <!-- <option selected>Sector</option> -->
                        <option value="it">IT</option>
                        <option value="consulting">Consulting</option>
                        <option value="others">Others</option>
                      </select>
             </div>
             </div>
+            
                  <br>
         <div class="form-group" style="color: white;">
                 <label for="name">About the company</label>
