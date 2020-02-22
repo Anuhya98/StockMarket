@@ -16,6 +16,8 @@ import { AdminlandingComponent } from './adminlanding/adminlanding.component';
 import { ManageCompaniesComponent } from './manage-companies/manage-companies.component';
 import { CompareSectorComponent } from './compare-sector/compare-sector.component';
 import { UserLandingComponent } from './user-landing/user-landing.component';
+import { ManagecompaniesComponent } from './managecompanies/managecompanies.component';
+import { UpdateCompanyComponent } from './update-company/update-company.component';
 
 
 
@@ -37,7 +39,9 @@ const routes: Routes = [
   {path:"adminlanding",component:AdminlandingComponent},
   {path:"managecompany",component:ManageCompaniesComponent},
   {path:"comparesector",component:CompareSectorComponent},
-  {path:"userlanding",component:UserLandingComponent}
+  {path:"userlanding",component:UserLandingComponent},
+  {path:"displaycompanies",component:ManagecompaniesComponent},
+  {path:"update-company",component:UpdateCompanyComponent}
 ];
 
 @NgModule({

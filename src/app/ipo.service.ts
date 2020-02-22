@@ -21,7 +21,7 @@ export class IpoService {
     return this.httpClient.delete<IPO>(this.httpUrl + id);
   }
   updateIPOInfo(ipo:IPO):Observable<IPO>{
-    return this.httpClient.put<IPO>(this.httpUrl+ipo.id,ipo);
+    return this.httpClient.put<IPO>(this.httpUrl+ipo.companyid,ipo);
   }
   getIPOById(id:number):Observable<IPO>{
     return this.httpClient.get<IPO>(this.httpUrl+id);

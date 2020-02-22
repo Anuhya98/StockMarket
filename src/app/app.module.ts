@@ -21,6 +21,8 @@ import { AdminlandingComponent } from './adminlanding/adminlanding.component';
 import { ManageCompaniesComponent } from './manage-companies/manage-companies.component';
 import { CompareSectorComponent } from './compare-sector/compare-sector.component';
 import { UserLandingComponent } from './user-landing/user-landing.component';
+import { ManagecompaniesComponent } from './managecompanies/managecompanies.component';
+import { UpdateCompanyComponent } from './update-company/update-company.component';
 //import { AddcompanyComponent } from './addcompany/addcompany.component';
 
 
@@ -44,6 +46,8 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
     ManageCompaniesComponent,
     CompareSectorComponent,
     UserLandingComponent,
+    ManagecompaniesComponent,
+    UpdateCompanyComponent,
     //AddcompanyComponent,
    
   ],

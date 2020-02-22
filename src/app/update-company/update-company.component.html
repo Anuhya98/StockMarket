@@ -1,5 +1,6 @@
+<title>Update Company Form</title>
 <div class="container" style="margin-bottom:0">
-    <form [formGroup]="managecompanyForm" novalidate class="form"  (ngSubmit)="submit()">
+    <form [formGroup]="updatecompanyForm" >
       <div class="form-group" style="color: white;">
         <label for="id">Company Id</label>
         <input type="number" formControlName="id" placeholder="enter company id" name="id" class="form-control" id="id">
@@ -47,6 +48,6 @@
                 <input type="text" formControlName="aboutcompany" placeholder="enter about the company" name="aboutcompany" class="form-control" id="aboutcompany">
               </div>
               <!-- <button type="submit" class="btn btn-success">Submit</button> -->
-              <button type="submit" class="btn btn-success" (click)="addCompany()" [disabled]="!managecompanyForm">Submit</button>
+              <button class="btn btn-success" (click)="updateTheCompany()" [disabled]="!updatecompanyForm">Update Company</button>
     </form> 
    </div>

@@ -29,6 +29,8 @@
                 <label for="name">Total no of shares</label>
                 <input type="number" formControlName="totalnoofshares" placeholder="enter total no of shares" name="totalnoofshares" class="form-control" id="totalnoofshares">
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <!-- <button type="submit" class="btn btn-success">Submit</button> -->
+              <button type="submit" class="btn btn-success" (click)="addIPO()" [disabled]="!ipoForm">Submit</button>
+
     </form> 
    </div>

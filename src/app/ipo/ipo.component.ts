@@ -28,9 +28,15 @@ ipoForm:FormGroup;
   }
   addIPO()
   {
-    this.ipoService.saveIPO(this.ipoForm.value.subscribe(data =>{
+    this.ipoService.saveIPO(this.ipoForm.value).subscribe(data =>{
       console.log('IPO inserted successfully');
-    }))
+    });
   }
+  // addUser()
+  // {
+  //   this.userService.saveUser(this.registerForm.value).subscribe(data =>{
+  //     console.log('User Inserted Successfully');
+  //   });
+  // }
 
 }

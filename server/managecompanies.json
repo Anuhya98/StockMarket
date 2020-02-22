@@ -1,34 +1,37 @@
 {
-"managecompanies":[
+  "managecompanies": [
     {
-        "companyname":"Patanjali",
-        "turnover":10000,
-        "companyceoname":"Ramdev",
-        "selectstockexchange":"nse",
-        "selectsector":"Ayurvedic"
+      "id": 123,
+      "companyname": "Patanjali",
+      "turnover": 10000,
+      "companyceoname": "Ramdev",
+      "selectstockexchange": "nse",
+      "selectsector": "Ayurvedic"
     },
     {
-        "companyname":"TCS",
-        "turnover":50000,
-        "companyceoname":"Chandrashekar",
-        "selectstockexchange":"bse",
-        "selectsector":"IT"
+      "id": 124,
+      "companyname": "TCS",
+      "turnover": 50000,
+      "companyceoname": "Chandrashekar",
+      "selectstockexchange": "bse",
+      "selectsector": "IT"
     },
     {
-        "companyname":"Reliance",
-        "turnover":80000,
-        "companyceoname":"Mukesh Ambani",
-        "selectstockexchange":"nse",
-        "selectsector":"All"
+      "id": 125,
+      "companyname": "Reliance",
+      "turnover": 80000,
+      "companyceoname": "Mukesh Ambani",
+      "selectstockexchange": "nse",
+      "selectsector": "All"
     },
     {
-        "companyname":"Loreal Paris",
-        "turnover":40000,
-        "companyceoname":"Mr.X",
-        "selectstockexchange":"bse",
-        "selectsector":"Beauty"
+      "id": 930,
+      "companyname": "Lakme",
+      "turnover": 5000,
+      "companyceoname": "Malavika",
+      "selectstockexchange": "nse",
+      "selectsector": "consulting",
+      "aboutcompany": "beauty products"
     }
-
-
-]
+  ]
 }

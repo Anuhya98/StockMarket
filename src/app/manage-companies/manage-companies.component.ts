@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl, FormBuilder, Validators} from '@angular/forms';
+import { CompanyService } from '../company.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-companies',
@@ -12,10 +14,11 @@ export class ManageCompaniesComponent implements OnInit {
 {
   console.log(this.managecompanyForm.value);
 }
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,private companyService:CompanyService,private router:Router) { }
 
   ngOnInit() {
     this.managecompanyForm=this.formBuilder.group({
+      id:['',Validators.required],
       companyname:['',Validators.required],
       turnover:['',Validators.required],
       companyceoname:['',Validators.required],
@@ -24,5 +27,11 @@ export class ManageCompaniesComponent implements OnInit {
       aboutcompany:['',Validators.required]
     })
   }
+
+  addCompany(){
+    this.companyService.saveCompany(this.managecompanyForm.value).subscribe(data =>{
+     console.log('Company Inserted Successfully');
+     });
+   }
 
 }

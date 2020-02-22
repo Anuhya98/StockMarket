@@ -20,7 +20,7 @@ export class CompaniesComponent implements OnInit {
 
   }
   deleteIPO(ipos:IPO){
-    this.iposService.deleteIPO(ipos.id).subscribe();
+    this.iposService.deleteIPO(ipos.companyid).subscribe();
     this.ipos=this.ipos.filter(u => u!==ipos);
   }
   

@@ -1,0 +1,22 @@
+<table border="1">
+    <tr>
+        <th>Company Id</th>
+        <th>CompanyName</th>
+        <th>Turnover</th>
+        <th>CEO name</th>
+        <th>StockExchange</th>
+        <th>Sector</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let company of managecompanies">
+        <td>{{company.id}}</td>
+        <td>{{company.companyname}}</td>
+        <td>{{company.turnover}}
+        <td>{{company.companyceoname}}</td>
+        <td>{{company.selectstockexchange}}</td>
+        <td>{{company.selectsector}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCompany(company.id)">Delete</button>
+        <button class="btn btn-danger" (click)="updateCompany(company)">Update</button></td>
+    </tr>
+</table>
+

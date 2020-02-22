@@ -16,4 +16,15 @@ export class CompanyService {
    saveCompany(company:Company):Observable<Company>{
     return this.httpClient.post<Company>(this.httpUrl,company);
    }
+   deleteCompany(id : number):Observable<Company>{
+    return this.httpClient.delete<Company>(this.httpUrl + id);
+  }
+  updateCompanyInfo(company:Company):Observable<Company>{
+    return this.httpClient.put<Company>(this.httpUrl,company);
+  }
+  getCompanyById(id:number):Observable<Company>{
+    return this.httpClient.get<Company>(this.httpUrl+id);
+  }
+
+   
 }

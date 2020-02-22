@@ -39,6 +39,14 @@
       "phoneno": 98765,
       "password": "0123",
       "confirmpassword": "0123"
+    },
+    {
+      "id": 111,
+      "username": "Harshitha",
+      "email": "harshi@hmail.com",
+      "phoneno": 456777,
+      "password": "123",
+      "confirmpassword": "123"
     }
   ]
 }
