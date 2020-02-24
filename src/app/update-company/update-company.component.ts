@@ -33,7 +33,7 @@ updatecompanyForm:FormGroup;
   
   updateTheCompany(company:Company){
     this.companyService.updateCompanyInfo(this.updatecompanyForm.value).subscribe( u => {
-      this.router.navigate(['/managecompanies']);
+      this.router.navigate(['/displaycompanies']);
     });
   }
 

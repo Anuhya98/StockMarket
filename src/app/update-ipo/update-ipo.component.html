@@ -1,8 +1,9 @@
+<h3 style="font-size: medium;color: aliceblue; text-align: center">Update IPO </h3>
 <div class="container" style="margin-bottom:0">
-    <form [formGroup]="updateipoForm" novalidate class="form"  (ngSubmit)="submit()">
+    <form [formGroup]="updateipoForm">
         <div class="form-group" style="color: white;">
             <label for="id">Company Id</label>
-            <input type="number" formControlName="companyid" placeholder="enter company id" name="companyid" class="form-control" id="companyid">
+            <input type="number" formControlName="id" placeholder="enter company id" name="id" class="form-control" id="id">
           </div>
         <div class="form-group" style="color: white;">
           <label for="name">Name of the company</label>
@@ -13,7 +14,7 @@
 
                 <p style="color: white;font-weight: bold">Select the stock exchange</p>
                 <select name="cars" class="form-control" formControlName="stockexchange">
-                   <option selected>Stock Exchange</option>
+                   <!-- <option selected>Stock Exchange</option> -->
                    <option value="nse">NSE</option>
                    <option value="bse">BSE</option>
                    <option value="others">Others</option>
@@ -29,7 +30,7 @@
                 <label for="name">Total no of shares</label>
                 <input type="number" formControlName="totalnoofshares" placeholder="enter total no of shares" name="totalnoofshares" class="form-control" id="totalnoofshares">
               </div>
-              <button class="btn btn-success" (click)="updateTheIPO()" [disabled]="!updateIPO">Update ipo</button>
+              <button class="btn btn-success" (click)="updateTheIPO()" [disabled]="!updateipoForm.valid">Update ipo</button>
 
     </form> 
    </div>

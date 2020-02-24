@@ -20,13 +20,15 @@ export class UserService {
   }
   deleteUser(id : number):Observable<User>{
     //return this.httpClient.delete<User>(this.httpUrl + id);
-    return this.ht.delete(`http://localhost/8080/users/${id}`);
+    return this.ht.delete(this.httpUrl + id);
   }
   updateUserInfo(user:User):Observable<User>{
-    return this.httpClient.put<User>(this.httpUrl+user.id,user);
+    //return this.httpClient.put<User>(this.httpUrl+user.id,user);
+    return this.ht.put(`http://localhost:8080/users`,user);
   }
   getUserById(id:number):Observable<User>{
-    return this.httpClient.get<User>(this.httpUrl+id);
+   // return this.httpClient.get<User>(this.httpUrl+id);
+   return this.ht.get(`http://localhost:8080/users/${id}`)
   }
 
 }

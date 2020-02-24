@@ -17,7 +17,7 @@ ipoForm:FormGroup;
 
   ngOnInit() {
     this.ipoForm=this.formBuilder.group({
-      companyid:['',Validators.required],
+      id:['',Validators.required],
       companyname:['',Validators.required],
       stockexchange:['',Validators.required],
       pricepershare:['',Validators.required],

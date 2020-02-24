@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IpoComponent } from './ipo/ipo.component';
@@ -8,22 +8,27 @@ import { IPO } from './models/ipos';
   providedIn: 'root'
 })
 export class IpoService {
-  httpUrl = 'http://localhost:3001/ipos/';
+  httpUrl = 'http://localhost:8080/ipos/';
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient,@Inject(HttpClient) private ht) { }
   getALLIPOs(): Observable<IPO[]> {
     return this.httpClient.get<IPO[]>(this.httpUrl);
   }
   saveIPO(ipos:IPO):Observable<IPO>{
+    //return this.httpClient.post<IPO>(this.httpUrl,ipos);
     return this.httpClient.post<IPO>(this.httpUrl,ipos);
   }
   deleteIPO(id : number):Observable<IPO>{
-    return this.httpClient.delete<IPO>(this.httpUrl + id);
+   //return this.httpClient.delete<IPO>(this.httpUrl + id);
+   return this.ht.delete(this.httpUrl+id);
+
   }
   updateIPOInfo(ipo:IPO):Observable<IPO>{
-    return this.httpClient.put<IPO>(this.httpUrl+ipo.companyid,ipo);
+    //return this.httpClient.put<IPO>(this.httpUrl+ipo.id,ipo);
+    return this.ht.put(`http://localhost:8080/updateipos`,ipo);
   }
   getIPOById(id:number):Observable<IPO>{
-    return this.httpClient.get<IPO>(this.httpUrl+id);
+    //return this.httpClient.get<IPO>(this.httpUrl+id);
+    return this.ht.get(`http://localhost:8080/ipos/${id}`);
   }
 }

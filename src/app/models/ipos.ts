@@ -1,5 +1,5 @@
 export class IPO{
-    companyid:number;
+    id:number;
     companyname:string;
     stockexchange:string;
     pricepershare:number;

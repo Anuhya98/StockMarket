@@ -1,4 +1,5 @@
-<table border="1">
+<div class="table-responsive">
+<table class="table">
     <tr>
         <th>Company Id</th>
         <th>CompanyName</th>
@@ -6,6 +7,7 @@
         <th>CEO name</th>
         <th>StockExchange</th>
         <th>Sector</th>
+        <th>About Company</th>
         <th>Actions</th>
     </tr>
     <tr *ngFor="let company of managecompanies">
@@ -15,8 +17,10 @@
         <td>{{company.companyceoname}}</td>
         <td>{{company.selectstockexchange}}</td>
         <td>{{company.selectsector}}</td>
-        <td><button class="btn btn-danger" (click)="deleteCompany(company.id)">Delete</button>
+        <td>{{company.aboutcompany}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCompany(company)">Delete</button>&nbsp;
         <button class="btn btn-danger" (click)="updateCompany(company)">Update</button></td>
     </tr>
 </table>
+</div>
 

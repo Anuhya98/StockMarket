@@ -19,9 +19,11 @@ export class ManagecompaniesComponent implements OnInit {
     });
   }
   deleteCompany(id:number){
-    this.companyService.deleteCompany(id).subscribe();
-    this.managecompanies=this.managecompanies.filter(u => u.id!==id);
-  }
+    this.companyService.deleteCompany(id).subscribe(data =>{
+      this.managecompanies=this.managecompanies.filter(u => u.id!==id);
+    });
+    
+    }
   updateCompany(company:Company)
   {
     localStorage.removeItem('companyId');

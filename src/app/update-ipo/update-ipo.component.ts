@@ -11,24 +11,30 @@ import { IPO } from '../models/ipos';
 })
 export class UpdateIpoComponent implements OnInit {
   updateipoForm: FormGroup;
-  submit()
-{
-  console.log(this.updateipoForm.value);
-}
+ 
 
-  constructor(private formBuilder:FormBuilder,private userService:IpoService,private router:Router) { }
+  constructor(private formBuilder:FormBuilder,private ipoService:IpoService,private router:Router) { }
 
   ngOnInit() {
     this.updateipoForm=this.formBuilder.group({
-      companyid:['',Validators.required],
+      id:['',Validators.required],
       companyname:['',Validators.required],
       stockexchange:['',Validators.required],
       pricepershare:['',Validators.required],
       totalnoofshares:['',Validators.required]
      
     });
-
+    const id=localStorage.getItem('ipoId');
+    if(+id>0){
+      this.ipoService.getIPOById(+id).subscribe(ipo =>{
+        this.updateipoForm.patchValue(ipo);
+      });
+    }
+    
+    }
+updateTheIPO(ipo:IPO){
+      this.ipoService.updateIPOInfo(this.updateipoForm.value).subscribe( u => {
+        this.router.navigate(['/iposlist']);
+      });
   }
- 
-
 }

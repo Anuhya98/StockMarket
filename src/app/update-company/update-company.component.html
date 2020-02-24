@@ -1,4 +1,4 @@
-<title>Update Company Form</title>
+<h3 style="font-size: medium;color: aliceblue; text-align: center">Update Company </h3>
 <div class="container" style="margin-bottom:0">
     <form [formGroup]="updatecompanyForm" >
       <div class="form-group" style="color: white;">
@@ -48,6 +48,6 @@
                 <input type="text" formControlName="aboutcompany" placeholder="enter about the company" name="aboutcompany" class="form-control" id="aboutcompany">
               </div>
               <!-- <button type="submit" class="btn btn-success">Submit</button> -->
-              <button class="btn btn-success" (click)="updateTheCompany()" [disabled]="!updatecompanyForm">Update Company</button>
+              <button class="btn btn-success" (click)="updateTheCompany()" [disabled]="!updatecompanyForm.valid">Update Company</button>
     </form> 
    </div>

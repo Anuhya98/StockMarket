@@ -18,20 +18,12 @@
     },
     {
       "id": 125,
-      "companyname": "Reliance",
+      "companyname": "Reliance Industries",
       "turnover": 80000,
       "companyceoname": "Mukesh Ambani",
-      "selectstockexchange": "nse",
-      "selectsector": "All"
-    },
-    {
-      "id": 930,
-      "companyname": "Lakme",
-      "turnover": 5000,
-      "companyceoname": "Malavika",
-      "selectstockexchange": "nse",
-      "selectsector": "consulting",
-      "aboutcompany": "beauty products"
+      "selectstockexchange": "bse",
+      "selectsector": "it",
+      "aboutcompany": "good"
     }
   ]
 }
