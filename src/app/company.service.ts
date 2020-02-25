@@ -19,7 +19,7 @@ export class CompanyService {
    }
    deleteCompany(id : number):Observable<Company>{
     //return this.httpClient.delete<Company>(this.httpUrl + id);
-    return this.ht.delete(this.httpUrl+id);
+    return this.ht.delete(`http://localhost:8080/company/${id}`);
   }
   updateCompanyInfo(company:Company):Observable<Company>{
     //return this.httpClient.put<Company>(this.httpUrl+company.id,company);

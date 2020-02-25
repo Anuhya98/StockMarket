@@ -24,6 +24,9 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
 import { ManagecompaniesComponent } from './managecompanies/managecompanies.component';
 import { UpdateCompanyComponent } from './update-company/update-company.component';
 import { IposComponent } from './ipos/ipos.component';
+import { StockexchangeComponent } from './stockexchange/stockexchange.component';
+import { ActivateComponent } from './activate/activate.component';
+import { StockexchangeslistComponent } from './stockexchangeslist/stockexchangeslist.component';
 //import { AddcompanyComponent } from './addcompany/addcompany.component';
 
 
@@ -50,6 +53,9 @@ import { IposComponent } from './ipos/ipos.component';
     ManagecompaniesComponent,
     UpdateCompanyComponent,
     IposComponent,
+    StockexchangeComponent,
+    ActivateComponent,
+    StockexchangeslistComponent,
     //AddcompanyComponent,
    
   ],

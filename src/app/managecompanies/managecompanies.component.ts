@@ -18,9 +18,9 @@ export class ManagecompaniesComponent implements OnInit {
       this.managecompanies = data;
     });
   }
-  deleteCompany(id:number){
-    this.companyService.deleteCompany(id).subscribe(data =>{
-      this.managecompanies=this.managecompanies.filter(u => u.id!==id);
+  deleteCompany(company:Company){
+    this.companyService.deleteCompany(company.id).subscribe(data =>{
+      this.managecompanies=this.managecompanies.filter(u => data!=u );
     });
     
     }

@@ -1,0 +1,24 @@
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>StockExchange</th>
+            <th>Brief</th>
+            <th>Contact address</th>
+            <th>Remarks</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let stockExchange of stockexchangeslist">
+            <td>{{stockExchange.id}}</td>
+            <td>{{stockExchange.stockexchange}}</td>
+            <td>{{stockExchange.brief}}</td>
+            <td>{{stockExchange.contactaddress}}</td>
+            <td>{{stockExchange.remarks}}</td>
+            <td><button class="btn btn-danger" (click)="deleteStockExchange(stockExchange)">Delete</button>&nbsp;
+            <button class="btn btn-danger" (click)="updateStockExchange(stockExchange)">Update</button></td>
+        </tr>
+    </table>
+    </div>
+    
+    

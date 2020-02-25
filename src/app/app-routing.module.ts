@@ -19,6 +19,9 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
 import { ManagecompaniesComponent } from './managecompanies/managecompanies.component';
 import { UpdateCompanyComponent } from './update-company/update-company.component';
 import { IposComponent } from './ipos/ipos.component';
+import { ActivateComponent } from './activate/activate.component';
+import { StockexchangeComponent } from './stockexchange/stockexchange.component';
+import { StockexchangeslistComponent } from './stockexchangeslist/stockexchangeslist.component';
 
 
 
@@ -43,7 +46,10 @@ const routes: Routes = [
   {path:"userlanding",component:UserLandingComponent},
   {path:"displaycompanies",component:ManagecompaniesComponent},
   {path:"update-company",component:UpdateCompanyComponent},
-  {path:"iposlist",component:IposComponent}
+  {path:"iposlist",component:IposComponent},
+  {path:"activateuser",component:ActivateComponent},
+  {path:"stockexchange",component:StockexchangeComponent},
+  {path:"displaystockexchanges",component:StockexchangeslistComponent}
 ];
 
 @NgModule({

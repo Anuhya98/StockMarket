@@ -9,10 +9,7 @@ import { UserService } from 'src/app/user.service';
 export class RegisterComponent implements OnInit {
 
 registerForm: FormGroup;
-submit()
-{
-  console.log(this.registerForm.value);
-}
+
   constructor(private userService:UserService,private formBuilder:FormBuilder) { }
 
   ngOnInit() {
@@ -31,5 +28,13 @@ submit()
       console.log('User Inserted Successfully');
     });
   }
+  submit()
+{
+  this.userService.reg().subscribe(data =>{
+    console.log("Coming status::"+data.reg);
+  })
+
+}
+
 
 }
