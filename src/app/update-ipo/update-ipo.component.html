@@ -30,7 +30,11 @@
                 <label for="name">Total no of shares</label>
                 <input type="number" formControlName="totalnoofshares" placeholder="enter total no of shares" name="totalnoofshares" class="form-control" id="totalnoofshares">
               </div>
-              <button class="btn btn-success" (click)="updateTheIPO()" [disabled]="!updateipoForm.valid">Update ipo</button>
+              <div class="form-group" style="color: white;">
+                <label for="name">Date and Time</label>
+                <input type="datetime-local" formControlName="opendatetime" placeholder="enter Date and Time" name="opendatetime" class="form-control" id="opendatetime">
+              </div>
+              <button class="btn btn-success" (click)="updateTheIPO()" >Update ipo</button>
 
     </form> 
    </div>

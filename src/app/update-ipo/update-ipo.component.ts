@@ -21,7 +21,8 @@ export class UpdateIpoComponent implements OnInit {
       companyname:['',Validators.required],
       stockexchange:['',Validators.required],
       pricepershare:['',Validators.required],
-      totalnoofshares:['',Validators.required]
+      totalnoofshares:['',Validators.required],
+      opendatetime:['',Validators.required]
      
     });
     const id=localStorage.getItem('ipoId');

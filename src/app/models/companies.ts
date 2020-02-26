@@ -5,4 +5,5 @@ export class Company{
     companyceoname:string;
     selectstockexchange:string;
     selectsector:string;
+    aboutcompany:string;
 }

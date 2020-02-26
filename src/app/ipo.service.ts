@@ -20,7 +20,8 @@ export class IpoService {
   }
   deleteIPO(id : number):Observable<IPO>{
    //return this.httpClient.delete<IPO>(this.httpUrl + id);
-   return this.ht.delete(this.httpUrl+id);
+  // return this.ht.delete(this.httpUrl+id);
+  return this.ht.delete(`http://localhost:8080/ipos/${id}`);
 
   }
   updateIPOInfo(ipo:IPO):Observable<IPO>{

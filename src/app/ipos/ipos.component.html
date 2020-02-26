@@ -1,4 +1,4 @@
-
+<h2 style="font-size: medium;color: aliceblue; text-align: center">IPO List Page</h2>
 <div class="table-responsive">
 <table class="table">
     <tr>
@@ -7,6 +7,7 @@
         <th>StockExchange</th>
         <th>TotalNoOfShares</th>
         <th>PricePerShare</th>
+        <th>Date And Time</th>
         <th>Actions</th>
     </tr>
     <tr *ngFor="let ipo of ipos">
@@ -15,6 +16,7 @@
         <td>{{ipo.stockexchange}}</td>
         <td>{{ipo.totalnoofshares}}</td>
         <td>{{ipo.pricepershare}}</td>
+        <td>{{ipo.opendatetime}}</td>
         <td><button class="btn btn-danger" (click)="deleteIPO(ipo.id)">Delete</button>&nbsp;
         <button class="btn btn-danger" (click)="updateIPO(ipo)">Update</button></td>
     </tr>

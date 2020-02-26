@@ -22,6 +22,7 @@ import { IposComponent } from './ipos/ipos.component';
 import { ActivateComponent } from './activate/activate.component';
 import { StockexchangeComponent } from './stockexchange/stockexchange.component';
 import { StockexchangeslistComponent } from './stockexchangeslist/stockexchangeslist.component';
+import { UpdateStockexchangeComponent } from './update-stockexchange/update-stockexchange.component';
 
 
 
@@ -47,9 +48,10 @@ const routes: Routes = [
   {path:"displaycompanies",component:ManagecompaniesComponent},
   {path:"update-company",component:UpdateCompanyComponent},
   {path:"iposlist",component:IposComponent},
-  {path:"activateuser",component:ActivateComponent},
+  {path:"activate",component:ActivateComponent},
   {path:"stockexchange",component:StockexchangeComponent},
-  {path:"displaystockexchanges",component:StockexchangeslistComponent}
+  {path:"displaystockexchanges",component:StockexchangeslistComponent},
+  {path:"update-stockexchange",component:UpdateStockexchangeComponent}
 ];
 
 @NgModule({

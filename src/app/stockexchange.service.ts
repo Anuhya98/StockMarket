@@ -8,7 +8,7 @@ import { StockExchange } from './models/stockexchange';
   providedIn: 'root'
 })
 export class StockexchangeService {
-  httpUrl = 'http://localhost:3003/stockexchange/';
+  httpUrl = 'http://localhost:8080/stockexchanges/';
 
   constructor(private httpClient:HttpClient,@Inject(HttpClient) private ht) { }
   getALLStockExchanges(): Observable<StockExchange[]> {
@@ -19,15 +19,15 @@ export class StockexchangeService {
     return this.httpClient.post<StockExchange>(this.httpUrl,stockExchange);
   }
   deleteStockExchange(id : number):Observable<StockExchange>{
-    return this.httpClient.delete<StockExchange>(this.httpUrl + id);
-   // return this.ht.delete(`http://localhost:8080/company/${id}`);
+    //return this.httpClient.delete<StockExchange>(this.httpUrl + id);
+    return this.ht.delete(`http://localhost:8080/stockexchanges/${id}`);
   }
   updateStockExchangeInfo(stockExchange:StockExchange):Observable<StockExchange>{
-    return this.httpClient.put<StockExchange>(this.httpUrl+stockExchange.id,stockExchange);
-    //return this.ht.put(`http://localhost:8080/updatecompany`,company);
+    //return this.httpClient.put<StockExchange>(this.httpUrl+stockExchange.id,stockExchange);
+    return this.ht.put(`http://localhost:8080/updatestockexchanges`,stockExchange);
   }
   getStockExchangeById(id:number):Observable<StockExchange>{
-     return this.httpClient.get<StockExchange>(this.httpUrl+id);
-    //return this.ht.get(`http://localhost:8080/company/${id}`)
+     //return this.httpClient.get<StockExchange>(this.httpUrl+id);
+    return this.ht.get(`http://localhost:8080/stockexchanges/${id}`)
    }
 }

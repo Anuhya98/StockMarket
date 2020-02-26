@@ -27,6 +27,7 @@ import { IposComponent } from './ipos/ipos.component';
 import { StockexchangeComponent } from './stockexchange/stockexchange.component';
 import { ActivateComponent } from './activate/activate.component';
 import { StockexchangeslistComponent } from './stockexchangeslist/stockexchangeslist.component';
+import { UpdateStockexchangeComponent } from './update-stockexchange/update-stockexchange.component';
 //import { AddcompanyComponent } from './addcompany/addcompany.component';
 
 
@@ -56,6 +57,7 @@ import { StockexchangeslistComponent } from './stockexchangeslist/stockexchanges
     StockexchangeComponent,
     ActivateComponent,
     StockexchangeslistComponent,
+    UpdateStockexchangeComponent,
     //AddcompanyComponent,
    
   ],

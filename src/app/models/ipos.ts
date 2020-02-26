@@ -4,4 +4,5 @@ export class IPO{
     stockexchange:string;
     pricepershare:number;
     totalnoofshares:number;
+    opendatetime:Date;
 }
