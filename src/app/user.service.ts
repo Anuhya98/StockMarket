@@ -34,7 +34,7 @@ export class UserService {
    return this.ht.get(`http://localhost:8080/users/${id}`)
   }
   serActivation(obj){
-    return this.ht.post("http://localhost:8080/users",obj)
+    return this.ht.put("http://localhost:8080/users/activate",obj)
   }
 
 }
