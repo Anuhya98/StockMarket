@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl, FormBuilder, Validators} from '@angular/forms';
 import { UserService } from 'src/app/user.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -10,7 +11,7 @@ export class RegisterComponent implements OnInit {
 
 registerForm: FormGroup;
 
-  constructor(private userService:UserService,private formBuilder:FormBuilder) { }
+  constructor(private userService:UserService,private formBuilder:FormBuilder,private s:Router) { }
 
   ngOnInit() {
     this.registerForm=this.formBuilder.group({
@@ -26,6 +27,18 @@ registerForm: FormGroup;
   {
     this.userService.saveUser(this.registerForm.value).subscribe(data =>{
       console.log('User Inserted Successfully');
+      if(data.res==0){
+        alert("User Already Avaialable");
+      }
+         else if(data.res==1){
+          console.log("User Details are Entered Success fully");
+          //alert("Successfully ENtered New User");
+        //alert("Added New User");
+        this.s.navigate(['/users']);
+        }
+        else{
+          alert("ERROR");
+        }
     });
   }
   submit()

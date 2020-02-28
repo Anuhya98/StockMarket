@@ -20,7 +20,7 @@ export class ManagecompaniesComponent implements OnInit {
   }
   deleteCompany(company:Company){
     this.companyService.deleteCompany(company.id).subscribe(data =>{
-      this.managecompanies=this.managecompanies.filter(u => data!=u );
+      this.managecompanies=this.managecompanies.filter(u => u!=company );
     });
     
     }

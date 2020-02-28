@@ -28,6 +28,7 @@ submit()
   addStockexchange(){
     this.stockExchangeService.saveStockExchange(this.stockExchangeForm.value).subscribe(data =>{
      console.log('StockExchange Inserted Successfully');
+     this.router.navigate(['/displaystockexchanges'])
      });
    }
  

@@ -21,7 +21,7 @@ export class StockexchangeslistComponent implements OnInit {
   }
   deleteStockExchange(stockExchange:StockExchange){
     this.stockExchangeService.deleteStockExchange(stockExchange.id).subscribe(data =>{
-      this.stockexchanges=this.stockexchanges.filter(u => data!==u );
+      this.stockexchanges=this.stockexchanges.filter(u => u!=stockExchange );
     });
     
     }

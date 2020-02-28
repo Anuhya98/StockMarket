@@ -15,8 +15,8 @@ export class UserService {
   getALLUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>(this.httpUrl);
   }
-  saveUser(user:User):Observable<User>{
-    return this.httpClient.post<User>(this.httpUrl,user);
+  saveUser(user:User){
+    return this.ht.post(this.httpUrl,user);
   }
   reg(){
     return this.ht.get(`http://localhost:8080/usersreg`);
