@@ -8,7 +8,7 @@ import { StockExchange } from './models/stockexchange';
   providedIn: 'root'
 })
 export class StockexchangeService {
-  httpUrl = 'http://localhost:8080/stockexchanges/';
+  httpUrl = 'http://localhost:8004/stockexchange/';
 
   constructor(private httpClient:HttpClient,@Inject(HttpClient) private ht) { }
   getALLStockExchanges(): Observable<StockExchange[]> {
@@ -20,14 +20,14 @@ export class StockexchangeService {
   }
   deleteStockExchange(id : number):Observable<StockExchange>{
     //return this.httpClient.delete<StockExchange>(this.httpUrl + id);
-    return this.ht.delete(`http://localhost:8080/stockexchanges/${id}`);
+    return this.ht.delete(`http://localhost:8004/stockexchange/${id}`);
   }
   updateStockExchangeInfo(stockExchange:StockExchange):Observable<StockExchange>{
     //return this.httpClient.put<StockExchange>(this.httpUrl+stockExchange.id,stockExchange);
-    return this.ht.put(`http://localhost:8080/updatestockexchanges`,stockExchange);
+    return this.ht.put(`http://localhost:8004/updatestockexchange`,stockExchange);
   }
   getStockExchangeById(id:number):Observable<StockExchange>{
      //return this.httpClient.get<StockExchange>(this.httpUrl+id);
-    return this.ht.get(`http://localhost:8080/stockexchanges/${id}`)
+    return this.ht.get(`http://localhost:8004/stockexchange/${id}`)
    }
 }

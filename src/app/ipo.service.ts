@@ -8,7 +8,7 @@ import { IPO } from './models/ipos';
   providedIn: 'root'
 })
 export class IpoService {
-  httpUrl = 'http://localhost:8080/ipos/';
+  httpUrl = 'http://localhost:8003/ipo/';
 
   constructor(private httpClient:HttpClient,@Inject(HttpClient) private ht) { }
   getALLIPOs(): Observable<IPO[]> {
@@ -21,15 +21,15 @@ export class IpoService {
   deleteIPO(id : number):Observable<IPO>{
    //return this.httpClient.delete<IPO>(this.httpUrl + id);
   // return this.ht.delete(this.httpUrl+id);
-  return this.ht.delete(`http://localhost:8080/ipos/${id}`);
+  return this.ht.delete(`http://localhost:8003/ipo/${id}`);
 
   }
   updateIPOInfo(ipo:IPO):Observable<IPO>{
     //return this.httpClient.put<IPO>(this.httpUrl+ipo.id,ipo);
-    return this.ht.put(`http://localhost:8080/updateipos`,ipo);
+    return this.ht.put(`http://localhost:8003/updateipo`,ipo);
   }
   getIPOById(id:number):Observable<IPO>{
     //return this.httpClient.get<IPO>(this.httpUrl+id);
-    return this.ht.get(`http://localhost:8080/ipos/${id}`);
+    return this.ht.get(`http://localhost:8003/ipo/${id}`);
   }
 }
