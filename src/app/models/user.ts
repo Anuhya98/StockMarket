@@ -6,4 +6,5 @@ export class User
     phoneno:number;
     password:string;
     confirmpassword:string;
+    regStatus:string;
 }

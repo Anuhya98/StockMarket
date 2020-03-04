@@ -11,11 +11,13 @@ import { User } from '../models/user';
 export class UsersComponent implements OnInit {
 
   constructor(private userService: UserService, private router: Router) { }
-  users: User[];
+  users: User[] = [];
   ngOnInit() {
     this.userService.getALLUsers().subscribe(data => {
       console.log(data);
       this.users = data;
+    },error =>{
+      console.log(error);
     });
   }
   deleteTheUser(user : User){

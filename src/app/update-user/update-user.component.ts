@@ -23,8 +23,10 @@ updateUser:FormGroup;
       confirmpassword:['',Validators.required]
     });
     const id=localStorage.getItem('userId');
+
     if(+id>0){
       this.userService.getUserById(+id).subscribe(user =>{
+        
         this.updateUser.patchValue(user);
       });
     }
