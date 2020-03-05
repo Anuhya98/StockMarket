@@ -27,10 +27,7 @@
 
 }
 .footer{
-  bottom: 0rem;
-  right: 0;
-  left: 0;
-  padding-bottom: 1;
+  position: relative;
   width: 100%;
 }
 

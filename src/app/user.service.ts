@@ -18,7 +18,8 @@ export class UserService {
     return this.httpClient.post<User>(this.httpUrl,user);
   }
   reg(){
-    return this.ht.get(this.httpUrl);
+   return this.ht.get('http://localhost:8001/users/activate');
+  
   }
   deleteUser(id : number):Observable<User>{
     //return this.httpClient.delete<User>(this.httpUrl + id);
@@ -29,12 +30,12 @@ export class UserService {
     return this.ht.put(this.httpUrl,user);
   }
   getUserById(id:number):Observable<User>{
-    alert("Id"+id)
+    //alert("Id"+id)
    // return this.httpClient.get<User>(this.httpUrl+id);
    return this.ht.get(this.httpUrl+id);
   }
   serActivation(obj){
-    return this.ht.put("http://localhost:8001/users/activate",obj)
+    return this.ht.put("http://localhost:8001/users",obj)
   }
 
 }
