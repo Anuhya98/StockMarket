@@ -28,6 +28,7 @@ import { StockexchangeComponent } from './stockexchange/stockexchange.component'
 import { ActivateComponent } from './activate/activate.component';
 import { StockexchangeslistComponent } from './stockexchangeslist/stockexchangeslist.component';
 import { UpdateStockexchangeComponent } from './update-stockexchange/update-stockexchange.component';
+import { ComparisonComponent } from './comparison/comparison.component';
 //import { AddcompanyComponent } from './addcompany/addcompany.component';
 
 
@@ -58,6 +59,7 @@ import { UpdateStockexchangeComponent } from './update-stockexchange/update-stoc
     ActivateComponent,
     StockexchangeslistComponent,
     UpdateStockexchangeComponent,
+    ComparisonComponent,
     //AddcompanyComponent,
    
   ],

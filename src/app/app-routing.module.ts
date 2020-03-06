@@ -23,6 +23,7 @@ import { ActivateComponent } from './activate/activate.component';
 import { StockexchangeComponent } from './stockexchange/stockexchange.component';
 import { StockexchangeslistComponent } from './stockexchangeslist/stockexchangeslist.component';
 import { UpdateStockexchangeComponent } from './update-stockexchange/update-stockexchange.component';
+import { ComparisonComponent } from './comparison/comparison.component';
 
 
 
@@ -51,7 +52,8 @@ const routes: Routes = [
   {path:"activate",component:ActivateComponent},
   {path:"stockexchange",component:StockexchangeComponent},
   {path:"displaystockexchanges",component:StockexchangeslistComponent},
-  {path:"update-stockexchange",component:UpdateStockexchangeComponent}
+  {path:"update-stockexchange",component:UpdateStockexchangeComponent},
+  {path:"comparison",component:ComparisonComponent}
 ];
 
 @NgModule({

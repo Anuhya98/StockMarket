@@ -6,4 +6,5 @@ table, th, td {
 td,th{
     color: aliceblue;
     font-size: medium;
+    text-align: center;
 }

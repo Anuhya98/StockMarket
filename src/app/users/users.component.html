@@ -5,8 +5,8 @@
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
-        <th>PAssword</th>
-        <th>Confirm Password</th>
+        <!-- <th>Password</th>
+        <th>Confirm Password</th> -->
         <th>Actions</th>
     </tr>
     <tr *ngFor="let user of users">
@@ -14,10 +14,10 @@
         <td>{{user.username}}</td>
         <td>{{user.email}}</td>
         <td>{{user.phoneno}}</td>
-        <td>{{user.password}}</td>
-        <td>{{user.confirmpassword}}</td>
-        <td><button class="btn btn-danger" (click)="deleteTheUser(user)"><i class='fas fa-trash' style='font-size:20px'></i></button>&nbsp;
-        <button class="btn btn-danger" (click)="updateUser(user)"><i class='fas fa-edit' style='font-size:20px'></i></button></td>
+        <!-- <td>{{user.password}}</td>
+        <td>{{user.confirmpassword}}</td> -->
+        <td><button class="btn btn-danger" (click)="deleteTheUser(user)"><i class='fas fa-user-times' style='font-size:20px'></i></button>&nbsp;
+        <button class="btn btn-danger" (click)="updateUser(user)"><i class='fas fa-user-edit' style='font-size:20px'></i></button></td>
     </tr>
 </table>
 </div>

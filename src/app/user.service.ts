@@ -18,7 +18,7 @@ export class UserService {
     return this.httpClient.post<User>(this.httpUrl,user);
   }
   reg(){
-   return this.ht.get('http://localhost:8001/users/activate');
+   return this.ht.get('http://localhost:8001/users');
   
   }
   deleteUser(id : number):Observable<User>{
@@ -35,7 +35,7 @@ export class UserService {
    return this.ht.get(this.httpUrl+id);
   }
   serActivation(obj){
-    return this.ht.put("http://localhost:8001/users",obj)
+    return this.ht.put("http://localhost:8001/users/activate",obj)
   }
 
 }
